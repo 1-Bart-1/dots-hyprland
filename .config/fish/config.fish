@@ -17,13 +17,47 @@ if test -f ~/.local/state/quickshell/user/generated/terminal/sequences.txt
     cat ~/.local/state/quickshell/user/generated/terminal/sequences.txt
 end
 
+# GIT
+alias commit 'git commit'
+alias restore 'git restore'
+alias check 'git checkout'
+alias add 'git add'
+alias stat 'git status'
+alias push 'git push'
+alias pull 'git pull'
+alias branch 'git branch'
+alias merge 'git merge'
+alias restore-mode 'git diff -p -R --no-ext-diff --no-color --diff-filter=M \
+  | grep -E "^(diff|(old|new) mode)" --color=never \
+  | git apply'
+alias giff 'git diff'
+
+# UTILITY
+alias j 'julia --project=.'
+alias jl './bin/run_julia'
+alias q exit
+alias rc 'nvim ~/.config/fish/config.fish && source ~/.config/fish/config.fish'
+alias pac pacman
 alias pamcan pacman
 alias ls 'eza --icons'
 alias clear "printf '\033[2J\033[3J\033[1;1H'"
-alias q 'qs -c ii'
-    
 
-# function fish_prompt
-#   set_color cyan; echo (pwd)
-#   set_color green; echo '> '
+# NEOVIM
+alias nplugin 'nvim ~/.config/nvim/lua/plugins/user.lua'
+function code
+    cd ~/Code/$argv[1] && nvim .
+end
+
+# REUSE
+alias mpl 'reuse annotate --copyright="Bart van de Lint <bart@vandelint.net>" --license="MPL-2.0"'
+
+# function dev
+#     set dir $argv[1]
+#     if not test -d "/home/bart/Code/$dir"
+#         echo "Error: Directory '/home/bart/$dir' not found."
+#         return 1
+#     end
+#     kitty --directory "/home/bart/Code/$dir" &
+#     cd "/home/bart/Code/$dir"
+#     helix .
 # end
