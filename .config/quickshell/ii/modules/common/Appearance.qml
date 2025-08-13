@@ -289,7 +289,7 @@ Singleton {
     }
 
     sizes: QtObject {
-        property real baseBarHeight: 40
+        property real baseBarHeight: 35
         property real barHeight: Config.options.bar.cornerStyle === 1 ? 
             (baseBarHeight + Appearance.sizes.hyprlandGapsOut * 2) : baseBarHeight
         property real barCenterSideModuleWidth: Config.options?.bar.verbose ? 360 : 140
@@ -305,7 +305,7 @@ Singleton {
         property real notificationPopupWidth: 410
         property real searchWidthCollapsed: 260
         property real searchWidth: 450
-        property real hyprlandGapsOut: 5
+        property real hyprlandGapsOut: 2
         property real elevationMargin: 10
         property real fabShadowRadius: 5
         property real fabHoveredShadowRadius: 7
