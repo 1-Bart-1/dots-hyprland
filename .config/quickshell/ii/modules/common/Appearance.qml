@@ -151,14 +151,14 @@ Singleton {
     rounding: QtObject {
         property int unsharpen: 2
         property int unsharpenmore: 6
-        property int verysmall: 6
-        property int small: 8
-        property int normal: 10
-        property int large: 13
-        property int verylarge: 15
+        property int verysmall: 4
+        property int small: 6
+        property int normal: 8
+        property int large: 10
+        property int verylarge: 12
         property int full: 9999
         property int screenRounding: large
-        property int windowRounding: 10
+        property int windowRounding: 8
     }
 
     font: QtObject {
@@ -305,7 +305,7 @@ Singleton {
         property real notificationPopupWidth: 410
         property real searchWidthCollapsed: 260
         property real searchWidth: 450
-        property real hyprlandGapsOut: 2
+        property real hyprlandGapsOut: 5
         property real elevationMargin: 10
         property real fabShadowRadius: 5
         property real fabHoveredShadowRadius: 7
